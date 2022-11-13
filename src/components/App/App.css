@@ -1,3 +1,59 @@
 @import url(../../vendor/normalize.css);
-
 @import url(../../vendor/fonts/roboto/Roboto.css);
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Общий стиль для приложения */
+.page {
+  /* Сглаживание */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  /* Шрифт для всей страницы */
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  /* Цветовая схема */
+  --surface: #fff;
+  --on-surface: #232323;
+  --primary: #5c87db;
+  /* Цвета страницы по умолчанию */
+  background-color: var(--surface);
+  color: var(--on-surface);
+  /* Тени */
+  --shadow: 0px 0px 14px rgba(112, 121, 153, 0.3);
+}
+
+/* Фокус интерактивных элементов по умолчанию */
+a:focus,
+button:focus,
+input:focus {
+  outline-offset: 5px;
+  outline-color: var(--primary);
+}
+
+/* Стили ссылок по умолчанию */
+a {
+  color: inherit;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* Родительский элемент всех компонентов */
+.content {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1000px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 10px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
