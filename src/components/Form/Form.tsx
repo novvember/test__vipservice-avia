@@ -4,16 +4,24 @@ import classNames from 'classnames';
 import FormValues from '../../types/FormValues';
 
 function Form({ onSubmit }: { onSubmit: (values: FormValues) => void }) {
-  const initialValues: FormValues = {
-    from: '',
-    to: '',
-    'date-to': '',
-    'date-back': '',
-  };
-
-  const [values, setValues] = useState(initialValues);
+  const [values, setValues] = useState(loadSavedValues());
   const [isValid, setIsValid] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  function loadSavedValues(): FormValues {
+    const savedValues = localStorage.getItem('formValues');
+    if (savedValues) return JSON.parse(savedValues);
+    return {
+      from: '',
+      to: '',
+      'date-to': '',
+      'date-back': '',
+    };
+  }
+
+  useEffect(() => {
+    localStorage.setItem('formValues', JSON.stringify(values));
+  }, [values]);
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     const input = event.target;
