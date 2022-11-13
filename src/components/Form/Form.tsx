@@ -1,9 +1,27 @@
 import './Form.css';
-import { FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import classNames from 'classnames';
+import FormValue from '../../types/FormValue';
 
 function Form() {
+  const initialValues: FormValue = {
+    from: '',
+    to: '',
+    'date-to': '',
+    'date-back': '',
+  };
+
+  const [values, setValues] = useState(initialValues);
+  const [isValid, setIsValid] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  function handleChange(event: ChangeEvent<HTMLInputElement>) {
+    const input = event.target;
+    const name = input.name;
+    const value = input.value;
+    setValues((values) => ({ ...values, [name]: value }));
+    setIsValid(input.closest('form')!.checkValidity());
+  }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -17,37 +35,59 @@ function Form() {
     <form
       className={classNames('form', { form_loading: isLoading })}
       onSubmit={handleSubmit}
+      noValidate
     >
       <div className="form__inputs">
         <label className="form__input-container form__input-container_type_from">
           <span className="form__input-label">Откуда</span>
           <input
             type="text"
+            name="from"
             className="form__input"
             placeholder="Город вылета"
+            onChange={handleChange}
+            value={values.from}
+            required
           />
         </label>
 
-        <label className="form__input-container form__input-container_type_where">
+        <label className="form__input-container form__input-container_type_to">
           <span className="form__input-label">Куда</span>
           <input
             type="text"
+            name="to"
             className="form__input"
             placeholder="Город прилёта"
+            onChange={handleChange}
+            value={values.to}
+            required
           />
         </label>
 
-        <label className="form__input-container form__input-container_type_date-from">
+        <label className="form__input-container form__input-container_type_date-to">
           <span className="form__input-label">Туда</span>
-          <input type="date" className="form__input form__input_type_date" />
+          <input
+            type="date"
+            name="date-to"
+            className="form__input form__input_type_date"
+            onChange={handleChange}
+            value={values['date-to']}
+            required
+          />
         </label>
 
-        <label className="form__input-container form__input-container_type_date-where">
+        <label className="form__input-container form__input-container_type_date-back">
           <span className="form__input-label">Обратно</span>
-          <input type="date" className="form__input form__input_type_date" />
+          <input
+            type="date"
+            name="date-back"
+            className="form__input form__input_type_date"
+            onChange={handleChange}
+            value={values['date-back']}
+          />
         </label>
       </div>
-      <button className="form__submit-button" type="submit">
+      <button className="form__submit-button" type="submit" disabled={!isValid}>
         Найти билеты
       </button>
     </form>
