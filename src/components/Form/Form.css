@@ -7,17 +7,54 @@
 }
 
 .form__inputs {
+  box-sizing: border-box;
   background-color: var(--primary);
   padding: 17px 30px 30px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 'from where date-from date-where';
   gap: 25px;
 }
 
+@media (max-width: 768px) {
+  .form__inputs {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'from where'
+      'date-from date-where';
+  }
+}
+
+@media (max-width: 425px) {
+  .form__inputs {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'from'
+      'where'
+      'date-from'
+      'date-where';
+  }
+}
+
 .form__input-container {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
+}
+
+.form__input-container_type_from {
+  grid-area: from;
+}
+
+.form__input-container_type_where {
+  grid-area: where;
+}
+
+.form__input-container_type_date-from {
+  grid-area: date-from;
+}
+
+.form__input-container_type_date-where {
+  grid-area: date-where;
 }
 
 .form__input-label {
@@ -29,6 +66,9 @@
 }
 
 .form__input {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
   padding: 12px;
   border-radius: 10px;
   border: none;
@@ -46,6 +86,27 @@
 .form__input:focus {
   outline: 1px solid var(--on-primary);
   outline-offset: 1px;
+}
+
+.form__input-container_type_date-where .form__input::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  height: 0;
+  width: 40px;
+  border-bottom: 1px dashed white;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 425px) {
+  .form__input-container_type_date-where .form__input::before {
+    top: 0;
+    left: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: 0 0;
+  }
 }
 
 .form__submit-button {
@@ -78,4 +139,10 @@
 
 .form__submit-button_loading {
   color: var(--on-primary-variant);
+}
+
+@media (max-width: 425px) {
+  .form__submit-button {
+    align-self: center;
+  }
 }
