@@ -36,6 +36,13 @@
   }
 }
 
+.form_loading .form__inputs {
+  background-image: url(../../images/icon__plane.svg);
+  background-size: 1.5em 1.5em;
+  animation: flying-planes 1.5s infinite linear,
+    changing-colors 1s infinite linear alternate;
+}
+
 .form__input-container {
   display: flex;
   flex-direction: column;
@@ -84,7 +91,7 @@
 }
 
 .form__input:focus {
-  outline: 2px solid var(--on-primary-variant);
+  outline: 1px solid var(--on-primary-variant);
   outline-offset: 1px;
 }
 
@@ -151,12 +158,31 @@
   background-color: var(--inactive);
 }
 
-.form__submit-button_loading {
+.form_loading .form__submit-button {
   color: var(--on-primary-variant);
+  pointer-events: none;
 }
 
 @media (max-width: 425px) {
   .form__submit-button {
     align-self: center;
+  }
+}
+
+@keyframes flying-planes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1.5em -1.5em;
+  }
+}
+
+@keyframes changing-colors {
+  from {
+    background-color: var(--primary);
+  }
+  to {
+    background-color: #675cdb;
   }
 }
