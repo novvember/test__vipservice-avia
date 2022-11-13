@@ -1,16 +1,19 @@
 import './Form.css';
-import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
 import FormValues from '../../types/FormValues';
 
 function Form({ onSubmit }: { onSubmit: (values: FormValues) => void }) {
+  const formRef = useRef<HTMLFormElement>(null);
   const [values, setValues] = useState(loadSavedValues());
   const [isValid, setIsValid] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   function loadSavedValues(): FormValues {
     const savedValues = localStorage.getItem('formValues');
-    if (savedValues) return JSON.parse(savedValues);
+    if (savedValues) {
+      return JSON.parse(savedValues);
+    }
     return {
       from: '',
       to: '',
@@ -23,12 +26,17 @@ function Form({ onSubmit }: { onSubmit: (values: FormValues) => void }) {
     localStorage.setItem('formValues', JSON.stringify(values));
   }, [values]);
 
+  useEffect(() => {
+    if (formRef.current !== null) {
+      setIsValid(formRef.current.checkValidity());
+    }
+  }, [values]);
+
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     const input = event.target;
     const name = input.name;
     const value = input.value;
     setValues((values) => ({ ...values, [name]: value }));
-    setIsValid(input.closest('form')!.checkValidity());
   }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -43,6 +51,7 @@ function Form({ onSubmit }: { onSubmit: (values: FormValues) => void }) {
       className={classNames('form', { form_loading: isLoading })}
       onSubmit={handleSubmit}
       noValidate
+      ref={formRef}
     >
       <div className="form__inputs">
         <label className="form__input-container form__input-container_type_from">
