@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/test__vipservice-avia/static/css/main.a63f24b2.css",
-    "main.js": "/test__vipservice-avia/static/js/main.020ba106.js",
+    "main.js": "/test__vipservice-avia/static/js/main.06fc239a.js",
     "static/media/Roboto-BlackItalic.ttf": "/test__vipservice-avia/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
     "static/media/Roboto-MediumItalic.ttf": "/test__vipservice-avia/static/media/Roboto-MediumItalic.82736aaa11c64709055f.ttf",
     "static/media/Roboto-LightItalic.ttf": "/test__vipservice-avia/static/media/Roboto-LightItalic.c590382422f2742d788b.ttf",
@@ -20,10 +20,10 @@
     "static/media/icon__plane.svg": "/test__vipservice-avia/static/media/icon__plane.7773868de11c7a59679d.svg",
     "static/media/icon__plane_dark.svg": "/test__vipservice-avia/static/media/icon__plane_dark.7ee88c96693cec601d74.svg",
     "main.a63f24b2.css.map": "/test__vipservice-avia/static/css/main.a63f24b2.css.map",
-    "main.020ba106.js.map": "/test__vipservice-avia/static/js/main.020ba106.js.map"
+    "main.06fc239a.js.map": "/test__vipservice-avia/static/js/main.06fc239a.js.map"
   },
   "entrypoints": [
     "static/css/main.a63f24b2.css",
-    "static/js/main.020ba106.js"
+    "static/js/main.06fc239a.js"
   ]
 }
