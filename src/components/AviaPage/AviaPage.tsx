@@ -1,12 +1,7 @@
-import Form from '../Form/Form';
 import './AviaPage.css';
 
-function AviaPage() {
-  return (
-    <main className="avia-page">
-      <Form />
-    </main>
-  );
+function AviaPage({ children }: { children: React.ReactNode }) {
+  return <main className="avia-page">{children}</main>;
 }
 
 export default AviaPage;

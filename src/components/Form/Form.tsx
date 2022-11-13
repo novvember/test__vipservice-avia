@@ -1,10 +1,10 @@
 import './Form.css';
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import classNames from 'classnames';
-import FormValue from '../../types/FormValue';
+import FormValues from '../../types/FormValues';
 
-function Form() {
-  const initialValues: FormValue = {
+function Form({ onSubmit }: { onSubmit: (values: FormValues) => void }) {
+  const initialValues: FormValues = {
     from: '',
     to: '',
     'date-to': '',
@@ -23,12 +23,11 @@ function Form() {
     setIsValid(input.closest('form')!.checkValidity());
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
+    await onSubmit(values);
+    setIsLoading(false);
   }
 
   return (
@@ -73,6 +72,7 @@ function Form() {
             onChange={handleChange}
             value={values['date-to']}
             required
+            placeholder="дд.мм.гггг"
           />
         </label>
 

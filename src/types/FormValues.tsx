@@ -1,4 +1,4 @@
-export default interface FormValue {
+export default interface FormValues {
   from: string;
   to: string;
   'date-to': string;
