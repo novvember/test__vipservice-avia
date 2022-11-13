@@ -24,12 +24,12 @@ function Form() {
 
         <label className="form__input-container form__input-container_type_date-from">
           <span className="form__input-label">Туда</span>
-          <input type="date" className="form__input" placeholder="дд.мм.гг" />
+          <input type="date" className="form__input form__input_type_date" />
         </label>
 
         <label className="form__input-container form__input-container_type_date-where">
           <span className="form__input-label">Обратно</span>
-          <input type="date" className="form__input" placeholder="дд.мм.гг" />
+          <input type="date" className="form__input form__input_type_date" />
         </label>
       </div>
       <button className="form__submit-button" type="submit">

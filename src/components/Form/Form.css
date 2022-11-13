@@ -84,7 +84,7 @@
 }
 
 .form__input:focus {
-  outline: 1px solid var(--on-primary);
+  outline: 2px solid var(--on-primary-variant);
   outline-offset: 1px;
 }
 
@@ -107,6 +107,20 @@
     transform: translateY(-50%) rotate(-90deg);
     transform-origin: 0 0;
   }
+}
+
+.form__input_type_date {
+  padding-left: 36px;
+}
+
+.form__input_type_date::-webkit-calendar-picker-indicator {
+  background-image: url(../../images/icon__calendar.svg);
+  position: absolute;
+  left: 5%;
+}
+
+.form__input_type_date:focus::-webkit-calendar-picker-indicator {
+  background-image: url(../../images/icon__calendar_active.svg);
 }
 
 .form__submit-button {
