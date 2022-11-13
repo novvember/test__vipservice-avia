@@ -20,6 +20,12 @@ html {
   --surface: #fff;
   --on-surface: #232323;
   --primary: #5c87db;
+  --primary-variant: #3e67b7;
+  --on-primary: #fff;
+  --on-primary-variant: rgba(255, 255, 255, 0.5);
+  --input-text: #5c5c5c;
+  --placeholder: #b7bac1;
+  --inactive: #b7bac1;
   /* Цвета страницы по умолчанию */
   background-color: var(--surface);
   color: var(--on-surface);

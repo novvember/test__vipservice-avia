@@ -1,0 +1,9 @@
+.footer {
+  padding-block: 2em;
+}
+
+.footer__text {
+  text-align: center;
+  font-size: smaller;
+  opacity: 0.7;
+}
