@@ -1,8 +1,23 @@
 import './Form.css';
+import { FormEvent, useState } from 'react';
+import classNames from 'classnames';
 
 function Form() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }
+
   return (
-    <form className="form">
+    <form
+      className={classNames('form', { form_loading: isLoading })}
+      onSubmit={handleSubmit}
+    >
       <div className="form__inputs">
         <label className="form__input-container form__input-container_type_from">
           <span className="form__input-label">Откуда</span>
