@@ -1,0 +1,79 @@
+.ticket {
+  box-shadow: var(--shadow);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr 190px;
+}
+
+.ticket__price {
+  padding: 36px 20px;
+  border-left: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: cener;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.19;
+}
+
+.ticket__ticket {
+  display: grid;
+  grid-template-columns: 150px 1fr max-content;
+}
+
+.ticket__airline {
+  padding: 36px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.ticket__airline-logo {
+  width: 40px;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.ticket__airline-title {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.17;
+  color: var(--on-surface-variant);
+}
+
+.ticket__luggage {
+  padding: 36px 20px;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.ticket__luggage-icon {
+  width: 20px;
+  object-fit: contain;
+}
+
+.ticket__info {
+  display: flex;
+  flex-direction: column;
+  padding-block: 36px;
+}
+
+.ticket__track {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  gap: 28px;
+}
+
+.ticket__point {
+  display: flex;
+  flex-direction: column;
+}

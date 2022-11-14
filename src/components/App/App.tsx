@@ -1,16 +1,22 @@
-import React from 'react';
+import { useState } from 'react';
 import AviaPage from '../AviaPage/AviaPage';
 import Footer from '../Footer/Footer';
 import './App.css';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import FormValues from '../../types/FormValues';
 import Form from '../Form/Form';
 import mockApi from '../../utils/mockApi';
+import { RoundTicket, SingleTicket } from '../../types/Ticket';
+import Tickets from '../Tickets/Tickets';
 
 function App() {
+  const navigate = useNavigate();
+  const [tickets, setTickets] = useState([] as SingleTicket[] | RoundTicket[]);
+
   async function handleSearch(values: FormValues) {
     const tickets = await mockApi.search(values);
-    console.log(tickets);
+    setTickets(tickets);
+    navigate('/avia/info');
   }
 
   return (
@@ -25,6 +31,7 @@ function App() {
             </AviaPage>
           }
         />
+        <Route path="/avia/info" element={<Tickets tickets={tickets} />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
 

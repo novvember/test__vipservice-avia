@@ -26,6 +26,7 @@ html {
   --input-text: #5c5c5c;
   --placeholder: #b7bac1;
   --inactive: #b7bac1;
+  --border: #dde3ee;
   /* Цвета страницы по умолчанию */
   background-color: var(--surface);
   color: var(--on-surface);
