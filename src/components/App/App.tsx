@@ -31,7 +31,16 @@ function App() {
             </AviaPage>
           }
         />
-        <Route path="/avia/info" element={<Tickets tickets={tickets} />} />
+        <Route
+          path="/avia/info"
+          element={
+            tickets.length > 0 ? (
+              <Tickets tickets={tickets} />
+            ) : (
+              <Navigate to="/avia" />
+            )
+          }
+        />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
 
