@@ -24,6 +24,7 @@ function App() {
             </AviaPage>
           }
         />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
 
       <Footer />
