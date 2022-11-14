@@ -1,6 +1,5 @@
 {
   "name": "test__vipservice-avia",
-  "homepage": "https://novvember.github.io/test__vipservice-avia",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

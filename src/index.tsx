@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/test__vipservice-avia">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
