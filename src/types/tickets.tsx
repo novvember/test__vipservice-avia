@@ -1,4 +1,4 @@
-interface Ticket {
+export interface Ticket {
   carrier: string;
   refundable: boolean;
   cabbinLuggage: boolean;

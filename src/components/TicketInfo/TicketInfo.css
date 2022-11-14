@@ -1,23 +1,3 @@
-.ticket {
-  box-shadow: var(--shadow);
-  border-radius: 15px;
-  display: grid;
-  grid-template-columns: 1fr 190px;
-}
-
-.ticket__price {
-  padding: 36px 20px;
-  border-left: 1px solid var(--border);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: cener;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1.19;
-}
-
 .ticket__ticket {
   display: grid;
   grid-template-columns: 150px 1fr max-content;
