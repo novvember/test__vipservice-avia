@@ -9,7 +9,7 @@ function Tickets({ tickets }: { tickets: SingleTicketType[] | RoundTicket[] }) {
   return (
     <ul className="tickets">
       {tickets.map((ticket) => {
-        return <Ticket ticket={ticket} />;
+        return <Ticket ticket={ticket} key={ticket.id} />;
       })}
     </ul>
   );

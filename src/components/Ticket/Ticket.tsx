@@ -1,15 +1,17 @@
 import { RoundTicket, SingleTicket } from '../../types/tickets';
 import formatPrice from '../../utils/formatPrice';
-import TicketInfo from '../TicketInfo/TicketInfo';
+import Flight from '../Flight/Flight';
 import './Ticket.css';
 
 function Ticket({ ticket }: { ticket: SingleTicket | RoundTicket }) {
   return (
     <li className="ticket">
-      <div className="ticket__info-container">
-        <TicketInfo />
-      </div>
-      <div className="ticket__price">{formatPrice(4000)}</div>
+      <ul className="ticket__flights">
+        {ticket.flights.map((flight) => {
+          return <Flight key={flight.id} flight={flight} />;
+        })}
+      </ul>
+      <p className="ticket__price">{formatPrice(4000)}</p>
     </li>
   );
 }

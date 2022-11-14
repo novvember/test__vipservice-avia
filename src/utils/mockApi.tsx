@@ -36,8 +36,9 @@ class MockApi {
       {
         type: 'single',
         id: 1,
-        tickets: [
+        flights: [
           {
+            id: 401,
             carrier: 'S7 Airlines',
             refundable: false,
             cabbinLuggage: true,
@@ -48,13 +49,13 @@ class MockApi {
                 date.getDate() + 7 * 60 * 60 * 1000 + 55 * 60 * 1000,
               ),
               city: from,
-              code: 'DME',
+              code: 'ABC',
             },
             toPoint: {
               time: new Date(
                 date.getDate() + 9 * 60 * 60 * 1000 + 37 * 60 * 1000,
               ),
-              code: 'SVO',
+              code: 'XYZ',
               city: to,
             },
           },
@@ -63,8 +64,9 @@ class MockApi {
       {
         type: 'single',
         id: 2,
-        tickets: [
+        flights: [
           {
+            id: 402,
             carrier: 'S7 Airlines',
             refundable: false,
             cabbinLuggage: true,
@@ -75,17 +77,18 @@ class MockApi {
                 date.getDate() + 9 * 60 * 60 * 1000 + 20 * 60 * 1000,
               ),
               city: from,
-              code: 'DME',
+              code: 'ABC',
             },
             toPoint: {
               time: new Date(
                 date.getDate() + 11 * 60 * 60 * 1000 + 5 * 60 * 1000,
               ),
-              code: 'SVO',
+              code: 'XYZ',
               city: to,
             },
           },
           {
+            id: 403,
             carrier: 'S7 Airlines',
             refundable: false,
             cabbinLuggage: true,
@@ -96,17 +99,18 @@ class MockApi {
                 date.getDate() + 10 * 60 * 60 * 1000 + 20 * 60 * 1000,
               ),
               city: from,
-              code: 'DME',
+              code: 'ABC',
             },
             toPoint: {
               time: new Date(
                 date.getDate() + 12 * 60 * 60 * 1000 + 5 * 60 * 1000,
               ),
-              code: 'SVO',
+              code: 'XYZ',
               city: to,
             },
           },
           {
+            id: 405,
             carrier: 'S7 Airlines',
             refundable: false,
             cabbinLuggage: true,
@@ -117,13 +121,13 @@ class MockApi {
                 date.getDate() + 11 * 60 * 60 * 1000 + 20 * 60 * 1000,
               ),
               city: from,
-              code: 'DME',
+              code: 'ABC',
             },
             toPoint: {
               time: new Date(
                 date.getDate() + 13 * 60 * 60 * 1000 + 5 * 60 * 1000,
               ),
-              code: 'SVO',
+              code: 'XYZ',
               city: to,
             },
           },
@@ -132,8 +136,9 @@ class MockApi {
       {
         type: 'single',
         id: 3,
-        tickets: [
+        flights: [
           {
+            id: 406,
             carrier: 'S7 Airlines',
             refundable: false,
             cabbinLuggage: false,
@@ -144,13 +149,13 @@ class MockApi {
                 date.getDate() + 19 * 60 * 60 * 1000 + 55 * 60 * 1000,
               ),
               city: from,
-              code: 'DME',
+              code: 'ABC',
             },
             toPoint: {
               time: new Date(
                 date.getDate() + 22 * 60 * 60 * 1000 + 7 * 60 * 1000,
               ),
-              code: 'SVO',
+              code: 'XYZ',
               city: to,
             },
           },
@@ -171,48 +176,52 @@ class MockApi {
       {
         type: 'round',
         id: 101,
-        ticketA: {
-          carrier: 'S7 Airlines',
-          refundable: false,
-          cabbinLuggage: true,
-          luggage: true,
-          price: 4100,
-          fromPoint: {
-            time: new Date(
-              dateTo.getDate() + 22 * 60 * 60 * 1000 + 57 * 60 * 1000,
-            ),
-            city: from,
-            code: 'DME',
+        flights: [
+          {
+            id: 501,
+            carrier: 'S7 Airlines',
+            refundable: false,
+            cabbinLuggage: true,
+            luggage: true,
+            price: 4100,
+            fromPoint: {
+              time: new Date(
+                dateTo.getDate() + 22 * 60 * 60 * 1000 + 57 * 60 * 1000,
+              ),
+              city: from,
+              code: 'ABC',
+            },
+            toPoint: {
+              time: new Date(
+                dateTo.getDate() + (24 + 11) * 60 * 60 * 1000 + 5 * 60 * 1000,
+              ),
+              code: 'XYZ',
+              city: to,
+            },
           },
-          toPoint: {
-            time: new Date(
-              dateTo.getDate() + (24 + 11) * 60 * 60 * 1000 + 5 * 60 * 1000,
-            ),
-            code: 'SVO',
-            city: to,
+          {
+            id: 502,
+            carrier: 'S7 Airlines',
+            refundable: false,
+            cabbinLuggage: true,
+            luggage: true,
+            price: 4200,
+            fromPoint: {
+              time: new Date(
+                dateBack.getDate() + 17 * 60 * 60 * 1000 + 11 * 60 * 1000,
+              ),
+              city: to,
+              code: 'ABC',
+            },
+            toPoint: {
+              time: new Date(
+                dateBack.getDate() + 22 * 60 * 60 * 1000 + 0 * 60 * 1000,
+              ),
+              code: 'XYZ',
+              city: from,
+            },
           },
-        },
-        ticketB: {
-          carrier: 'S7 Airlines',
-          refundable: false,
-          cabbinLuggage: true,
-          luggage: true,
-          price: 4200,
-          fromPoint: {
-            time: new Date(
-              dateBack.getDate() + 17 * 60 * 60 * 1000 + 11 * 60 * 1000,
-            ),
-            city: to,
-            code: 'DME',
-          },
-          toPoint: {
-            time: new Date(
-              dateBack.getDate() + 22 * 60 * 60 * 1000 + 0 * 60 * 1000,
-            ),
-            code: 'SVO',
-            city: from,
-          },
-        },
+        ],
       },
     ];
 

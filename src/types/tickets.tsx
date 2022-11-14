@@ -1,4 +1,5 @@
-export interface Ticket {
+export interface Flight {
+  id: number,
   carrier: string;
   refundable: boolean;
   cabbinLuggage: boolean;
@@ -17,12 +18,11 @@ interface Point {
 export interface SingleTicket {
   type: 'single';
   id: number;
-  tickets: Ticket[];
+  flights: Flight[];
 }
 
 export interface RoundTicket {
   type: 'round';
   id: number;
-  ticketA: Ticket;
-  ticketB: Ticket;
+  flights: [Flight, Flight];
 }

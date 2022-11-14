@@ -32,6 +32,7 @@ html {
   color: var(--on-surface);
   /* Тени */
   --shadow: 0px 0px 14px rgba(112, 121, 153, 0.3);
+  --shadow-on-hover: 0px 0px 20px rgba(112, 121, 153, 0.4);
 }
 
 /* Фокус интерактивных элементов по умолчанию */

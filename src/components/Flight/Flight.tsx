@@ -1,10 +1,10 @@
-import './TicketInfo.css';
+import './Flight.css';
 import logo from '../../images/logo_s7.png';
 import luggageIcon from '../../images/icon__luggage_active.svg';
 import cabinLuggageIcon from '../../images/icon__cabin-luggage_active.svg';
-import { Ticket } from '../../types/tickets';
+import { Flight as FlightType } from '../../types/tickets';
 
-function TicketInfo() {
+function Flight({ flight }: { flight: FlightType }) {
   return (
     <div className="ticket__ticket">
       <div className="ticket__airline">
@@ -48,4 +48,4 @@ function TicketInfo() {
   );
 }
 
-export default TicketInfo;
+export default Flight;

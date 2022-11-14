@@ -2,19 +2,46 @@
   box-shadow: var(--shadow);
   border-radius: 15px;
   display: grid;
-  grid-template-columns: 1fr 190px;
+  grid-template-columns: 1fr minmax(190px, max-content);
+  transition: box-shadow 0.2s;
+}
+
+.ticket:hover {
+  box-shadow: var(--shadow-on-hover);
+}
+
+@media (max-width: 768px) {
+  .ticket {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ticket__flights {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .ticket__price {
+  margin: 0;
   padding: 36px 20px;
   border-left: 1px solid var(--border);
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: cener;
+  text-align: center;
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 1.19;
 }
 
+@media (max-width: 768px) {
+  .ticket__price {
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding: 20px 20px;
+    justify-content: right;
+    grid-template-columns: 1fr;
+  }
+}
