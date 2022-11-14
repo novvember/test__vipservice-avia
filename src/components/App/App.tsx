@@ -6,7 +6,7 @@ import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import FormValues from '../../types/FormValues';
 import Form from '../Form/Form';
 import mockApi from '../../utils/mockApi';
-import { RoundTicket, SingleTicket } from '../../types/Ticket';
+import { RoundTicket, SingleTicket } from '../../types/tickets';
 import Tickets from '../Tickets/Tickets';
 
 function App() {

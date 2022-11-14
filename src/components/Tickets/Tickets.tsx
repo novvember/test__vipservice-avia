@@ -1,7 +1,7 @@
 import {
   RoundTicket,
   SingleTicket as SingleTicketType,
-} from '../../types/Ticket';
+} from '../../types/tickets';
 import SingleTicket from '../SingleTicket/SingleTicket';
 import './Tickets.css';
 

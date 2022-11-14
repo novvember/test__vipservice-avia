@@ -1,5 +1,5 @@
 import FormValues from '../types/FormValues';
-import { RoundTicket, SingleTicket } from '../types/Ticket';
+import { RoundTicket, SingleTicket } from '../types/tickets';
 
 class MockApi {
   async search(query: FormValues): Promise<SingleTicket[] | RoundTicket[]> {
@@ -35,6 +35,7 @@ class MockApi {
     const tickets: SingleTicket[] = [
       {
         type: 'single',
+        id: 1,
         tickets: [
           {
             carrier: 'S7 Airlines',
@@ -61,6 +62,7 @@ class MockApi {
       },
       {
         type: 'single',
+        id: 2,
         tickets: [
           {
             carrier: 'S7 Airlines',
@@ -129,6 +131,7 @@ class MockApi {
       },
       {
         type: 'single',
+        id: 3,
         tickets: [
           {
             carrier: 'S7 Airlines',
@@ -167,6 +170,7 @@ class MockApi {
     const tickets: RoundTicket[] = [
       {
         type: 'round',
+        id: 101,
         ticketA: {
           carrier: 'S7 Airlines',
           refundable: false,

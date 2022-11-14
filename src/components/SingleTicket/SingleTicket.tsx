@@ -1,4 +1,4 @@
-import { SingleTicket as SingleTicketType } from '../../types/Ticket';
+import { SingleTicket as SingleTicketType } from '../../types/tickets';
 import './SingleTicket.css';
 import logo from '../../images/logo_s7.png';
 import formatPrice from '../../utils/formatPrice';
