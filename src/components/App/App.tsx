@@ -9,7 +9,8 @@ import mockApi from '../../utils/mockApi';
 
 function App() {
   async function handleSearch(values: FormValues) {
-    await mockApi.search(values);
+    const tickets = await mockApi.search(values);
+    console.log(tickets);
   }
 
   return (

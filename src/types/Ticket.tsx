@@ -16,7 +16,7 @@ interface Point {
 
 export interface SingleTicket {
   type: 'single';
-  ticket: Ticket;
+  tickets: Ticket[];
 }
 
 export interface RoundTicket {
