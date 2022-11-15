@@ -5,6 +5,9 @@ import luggageActiveIcon from '../../images/icon__luggage_active.svg';
 import cabinLuggageActiveIcon from '../../images/icon__cabin-luggage_active.svg';
 import luggageIcon from '../../images/icon__luggage.svg';
 import cabinLuggageIcon from '../../images/icon__cabin-luggage.svg';
+import formatTime from '../../utils/formatTime';
+import formatDate from '../../utils/formatDate';
+import formatDuration from '../../utils/formatDuration';
 
 function Flight({ flight }: { flight: FlightType }) {
   return (
@@ -17,7 +20,7 @@ function Flight({ flight }: { flight: FlightType }) {
         <img
           className="flight__carrier-logo"
           src={logo}
-          alt="Логотоип авиакомпании"
+          alt="Логотип авиакомпании"
         />
         <p className="flight__carrier-title">{flight.carrier}</p>
       </div>
@@ -25,19 +28,29 @@ function Flight({ flight }: { flight: FlightType }) {
       <div className="flight__info">
         <div className="flight__way">
           <div className="flight__station flight__station_type_A">
-            <span className="flight__time">9:20</span>
-            <span className="flight__city">Москва</span>
-            <span className="flight__date">14.11.2022</span>
+            <span className="flight__time">
+              {formatTime(flight.fromPoint.time)}
+            </span>
+            <span className="flight__city">{flight.fromPoint.city}</span>
+            <span className="flight__date">
+              {formatDate(flight.fromPoint.time)}
+            </span>
           </div>
           <div className="flight__track">
-            <span className="flight__code">SVO</span>
-            <span className="flight__duration">В пути 1 ч 55 мин</span>
-            <span className="flight__code">SVO</span>
+            <span className="flight__code">{flight.fromPoint.code}</span>
+            <span className="flight__duration">
+              {formatDuration(flight.fromPoint.time, flight.toPoint.time)}
+            </span>
+            <span className="flight__code">{flight.toPoint.code}</span>
           </div>
           <div className="flight__station flight__station_type_B">
-            <span className="flight__time">9:20</span>
-            <span className="flight__city">Москва</span>
-            <span className="flight__date">14.11.2022</span>
+            <span className="flight__time">
+              {formatTime(flight.toPoint.time)}
+            </span>
+            <span className="flight__city">{flight.toPoint.city}</span>
+            <span className="flight__date">
+              {formatDate(flight.toPoint.time)}
+            </span>
           </div>{' '}
         </div>
         <div className="flight__tabs">Tabs will be here</div>

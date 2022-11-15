@@ -40,21 +40,17 @@ class MockApi {
           {
             id: 401,
             carrier: 'S7 Airlines',
-            refundable: false,
+            refundable: true,
             cabbinLuggage: true,
             luggage: false,
             price: 6700,
             fromPoint: {
-              time: new Date(
-                date.getDate() + 7 * 60 * 60 * 1000 + 55 * 60 * 1000,
-              ),
+              time: new Date(+date + 7 * 60 * 60 * 1000 + 55 * 60 * 1000),
               city: from,
               code: 'ABC',
             },
             toPoint: {
-              time: new Date(
-                date.getDate() + 9 * 60 * 60 * 1000 + 37 * 60 * 1000,
-              ),
+              time: new Date(+date + 9 * 60 * 60 * 1000 + 37 * 60 * 1000),
               code: 'XYZ',
               city: to,
             },
@@ -73,16 +69,12 @@ class MockApi {
             luggage: true,
             price: 4150,
             fromPoint: {
-              time: new Date(
-                date.getDate() + 9 * 60 * 60 * 1000 + 20 * 60 * 1000,
-              ),
+              time: new Date(+date + 9 * 60 * 60 * 1000 + 20 * 60 * 1000),
               city: from,
               code: 'ABC',
             },
             toPoint: {
-              time: new Date(
-                date.getDate() + 11 * 60 * 60 * 1000 + 5 * 60 * 1000,
-              ),
+              time: new Date(+date + 11 * 60 * 60 * 1000 + 5 * 60 * 1000),
               code: 'XYZ',
               city: to,
             },
@@ -95,16 +87,12 @@ class MockApi {
             luggage: true,
             price: 4150,
             fromPoint: {
-              time: new Date(
-                date.getDate() + 10 * 60 * 60 * 1000 + 20 * 60 * 1000,
-              ),
+              time: new Date(+date + 10 * 60 * 60 * 1000 + 20 * 60 * 1000),
               city: from,
               code: 'ABC',
             },
             toPoint: {
-              time: new Date(
-                date.getDate() + 12 * 60 * 60 * 1000 + 5 * 60 * 1000,
-              ),
+              time: new Date(+date + 12 * 60 * 60 * 1000 + 5 * 60 * 1000),
               code: 'XYZ',
               city: to,
             },
@@ -117,16 +105,12 @@ class MockApi {
             luggage: true,
             price: 4150,
             fromPoint: {
-              time: new Date(
-                date.getDate() + 11 * 60 * 60 * 1000 + 20 * 60 * 1000,
-              ),
+              time: new Date(+date + 11 * 60 * 60 * 1000 + 20 * 60 * 1000),
               city: from,
               code: 'ABC',
             },
             toPoint: {
-              time: new Date(
-                date.getDate() + 13 * 60 * 60 * 1000 + 5 * 60 * 1000,
-              ),
+              time: new Date(+date + 13 * 60 * 60 * 1000 + 5 * 60 * 1000),
               code: 'XYZ',
               city: to,
             },
@@ -145,16 +129,12 @@ class MockApi {
             luggage: false,
             price: 6700,
             fromPoint: {
-              time: new Date(
-                date.getDate() + 19 * 60 * 60 * 1000 + 55 * 60 * 1000,
-              ),
+              time: new Date(+date + 19 * 60 * 60 * 1000 + 55 * 60 * 1000),
               city: from,
               code: 'ABC',
             },
             toPoint: {
-              time: new Date(
-                date.getDate() + 22 * 60 * 60 * 1000 + 7 * 60 * 1000,
-              ),
+              time: new Date(+date + 22 * 60 * 60 * 1000 + 7 * 60 * 1000),
               code: 'XYZ',
               city: to,
             },
@@ -180,20 +160,18 @@ class MockApi {
           {
             id: 501,
             carrier: 'S7 Airlines',
-            refundable: false,
+            refundable: true,
             cabbinLuggage: true,
             luggage: true,
             price: 4100,
             fromPoint: {
-              time: new Date(
-                dateTo.getDate() + 22 * 60 * 60 * 1000 + 57 * 60 * 1000,
-              ),
+              time: new Date(+dateTo + 22 * 60 * 60 * 1000 + 57 * 60 * 1000),
               city: from,
               code: 'ABC',
             },
             toPoint: {
               time: new Date(
-                dateTo.getDate() + (24 + 11) * 60 * 60 * 1000 + 5 * 60 * 1000,
+                +dateTo + (24 + 11) * 60 * 60 * 1000 + 5 * 60 * 1000,
               ),
               code: 'XYZ',
               city: to,
@@ -207,16 +185,12 @@ class MockApi {
             luggage: true,
             price: 4200,
             fromPoint: {
-              time: new Date(
-                dateBack.getDate() + 17 * 60 * 60 * 1000 + 11 * 60 * 1000,
-              ),
+              time: new Date(+dateBack + 17 * 60 * 60 * 1000 + 11 * 60 * 1000),
               city: to,
               code: 'ABC',
             },
             toPoint: {
-              time: new Date(
-                dateBack.getDate() + 22 * 60 * 60 * 1000 + 0 * 60 * 1000,
-              ),
+              time: new Date(+dateBack + 22 * 60 * 60 * 1000 + 0 * 60 * 1000),
               code: 'XYZ',
               city: from,
             },

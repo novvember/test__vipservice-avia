@@ -15,6 +15,7 @@
 
 @media (max-width: 768px) {
   .flight {
+    border-top-right-radius: 15px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       'carrier luggage'
