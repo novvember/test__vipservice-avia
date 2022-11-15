@@ -2,7 +2,7 @@
 
 Мини-приложение для поиска авиабилетов. Тестовое задание для "Випсервиса".
 
-## 👀 Демо [`novvember.github.io/test\_\_vipservice-avia`](http://novvember.github.io/test__vipservice-avia)
+## 👀 Демо [`novvember.github.io/vipservice-avia`](http://novvember.github.io/test__vipservice-avia)
 
 ![Пример работы](./example.gif)
 
