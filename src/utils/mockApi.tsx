@@ -87,12 +87,12 @@ class MockApi {
             luggage: true,
             price: 4150,
             fromPoint: {
-              time: new Date(+date + 10 * 60 * 60 * 1000 + 20 * 60 * 1000),
+              time: new Date(+date + 10 * 60 * 60 * 1000 + 10 * 60 * 1000),
               city: from,
               code: 'ABC',
             },
             toPoint: {
-              time: new Date(+date + 12 * 60 * 60 * 1000 + 5 * 60 * 1000),
+              time: new Date(+date + 12 * 60 * 60 * 1000 + 15 * 60 * 1000),
               code: 'XYZ',
               city: to,
             },
@@ -105,12 +105,12 @@ class MockApi {
             luggage: true,
             price: 4150,
             fromPoint: {
-              time: new Date(+date + 11 * 60 * 60 * 1000 + 20 * 60 * 1000),
+              time: new Date(+date + 11 * 60 * 60 * 1000 + 45 * 60 * 1000),
               city: from,
               code: 'ABC',
             },
             toPoint: {
-              time: new Date(+date + 13 * 60 * 60 * 1000 + 5 * 60 * 1000),
+              time: new Date(+date + 13 * 60 * 60 * 1000 + 7 * 60 * 1000),
               code: 'XYZ',
               city: to,
             },
@@ -182,7 +182,7 @@ class MockApi {
             carrier: 'S7 Airlines',
             refundable: false,
             cabbinLuggage: true,
-            luggage: true,
+            luggage: false,
             price: 4200,
             fromPoint: {
               time: new Date(+dateBack + 17 * 60 * 60 * 1000 + 11 * 60 * 1000),
@@ -191,6 +191,92 @@ class MockApi {
             },
             toPoint: {
               time: new Date(+dateBack + 22 * 60 * 60 * 1000 + 0 * 60 * 1000),
+              code: 'XYZ',
+              city: from,
+            },
+          },
+        ],
+      },
+      {
+        type: 'round',
+        id: 104,
+        flights: [
+          {
+            id: 5010,
+            carrier: 'S7 Airlines',
+            refundable: false,
+            cabbinLuggage: true,
+            luggage: false,
+            price: 4850,
+            fromPoint: {
+              time: new Date(+dateTo + 17 * 60 * 60 * 1000 + 10 * 60 * 1000),
+              city: from,
+              code: 'ABC',
+            },
+            toPoint: {
+              time: new Date(+dateTo + 18 * 60 * 60 * 1000 + 25 * 60 * 1000),
+              code: 'XYZ',
+              city: to,
+            },
+          },
+          {
+            id: 5011,
+            carrier: 'S7 Airlines',
+            refundable: false,
+            cabbinLuggage: true,
+            luggage: false,
+            price: 4116,
+            fromPoint: {
+              time: new Date(+dateBack + 0 * 60 * 60 * 1000 + 0 * 60 * 1000),
+              city: to,
+              code: 'ABC',
+            },
+            toPoint: {
+              time: new Date(+dateBack + 2 * 60 * 60 * 1000 + 15 * 60 * 1000),
+              code: 'XYZ',
+              city: from,
+            },
+          },
+        ],
+      },
+      {
+        type: 'round',
+        id: 102,
+        flights: [
+          {
+            id: 504,
+            carrier: 'S7 Airlines',
+            refundable: true,
+            cabbinLuggage: true,
+            luggage: true,
+            price: 5600,
+            fromPoint: {
+              time: new Date(+dateTo + 17 * 60 * 60 * 1000 + 7 * 60 * 1000),
+              city: from,
+              code: 'ABC',
+            },
+            toPoint: {
+              time: new Date(
+                +dateTo + (24 + 0) * 60 * 60 * 1000 + 28 * 60 * 1000,
+              ),
+              code: 'XYZ',
+              city: to,
+            },
+          },
+          {
+            id: 505,
+            carrier: 'S7 Airlines',
+            refundable: true,
+            cabbinLuggage: true,
+            luggage: true,
+            price: 5400,
+            fromPoint: {
+              time: new Date(+dateBack + 5 * 60 * 60 * 1000 + 19 * 60 * 1000),
+              city: to,
+              code: 'ABC',
+            },
+            toPoint: {
+              time: new Date(+dateBack + 11 * 60 * 60 * 1000 + 5 * 60 * 1000),
               code: 'XYZ',
               city: from,
             },

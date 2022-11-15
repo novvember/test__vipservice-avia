@@ -40,7 +40,7 @@
 
 .flight__carrier {
   grid-area: carrier;
-  padding-top: 18px;
+  /* padding-top: 18px; */
   display: flex;
   flex-direction: column;
   justify-content: top;
@@ -172,7 +172,7 @@
 
 @media (max-width: 768px) {
   .flight__track {
-    width: 70%;
+    width: 80%;
     justify-self: center;
   }
 }

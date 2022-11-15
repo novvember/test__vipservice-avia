@@ -4,7 +4,6 @@
   display: grid;
   grid-template-columns: 1fr minmax(190px, max-content);
   transition: box-shadow 0.2s;
-  cursor: pointer;
 }
 
 .ticket:hover {

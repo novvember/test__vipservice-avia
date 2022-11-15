@@ -1,0 +1,54 @@
+.tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.tabs__radio-container {
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.tabs__radio-container:hover {
+  opacity: 0.8;
+}
+
+.tabs__radio-input {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.tabs__radio-label {
+  display: block;
+  padding: 6px;
+  border: 1px solid var(--inactive);
+  border-radius: 10px;
+  color: var(--on-surface-variant);
+  transition: background-color 0.2s;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.17;
+}
+
+.tabs__depart-time {
+  font-size: 18px;
+}
+
+.tabs__radio-input:checked + .tabs__radio-label {
+  padding: 10px 15px;
+  border: none;
+  background-color: var(--active);
+  color: var(--on-surface);
+}
+
+.filter__radio-label:active {
+  transform: scale(0.9);
+}

@@ -9,7 +9,13 @@ import formatTime from '../../utils/formatTime';
 import formatDate from '../../utils/formatDate';
 import formatDuration from '../../utils/formatDuration';
 
-function Flight({ flight }: { flight: FlightType }) {
+function Flight({
+  flight,
+  children,
+}: {
+  flight: FlightType;
+  children?: React.ReactNode;
+}) {
   return (
     <li className="flight">
       {!flight.refundable && (
@@ -53,7 +59,8 @@ function Flight({ flight }: { flight: FlightType }) {
             </span>
           </div>{' '}
         </div>
-        <div className="flight__tabs">Tabs will be here</div>
+
+        {children && children}
       </div>
 
       <div className="flight__luggage">
