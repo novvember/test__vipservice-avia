@@ -1,6 +1,5 @@
 import './Flight.css';
 import { Flight as FlightType } from '../../types/tickets';
-import logo from '../../images/logo_s7.png';
 import luggageActiveIcon from '../../images/icon__luggage_active.svg';
 import cabinLuggageActiveIcon from '../../images/icon__cabin-luggage_active.svg';
 import luggageIcon from '../../images/icon__luggage.svg';
@@ -8,6 +7,7 @@ import cabinLuggageIcon from '../../images/icon__cabin-luggage.svg';
 import formatTime from '../../utils/formatTime';
 import formatDate from '../../utils/formatDate';
 import formatDuration from '../../utils/formatDuration';
+import getCarrierLogo from '../../utils/getCarrierLogo';
 
 function Flight({
   flight,
@@ -25,7 +25,7 @@ function Flight({
       <div className="flight__carrier">
         <img
           className="flight__carrier-logo"
-          src={logo}
+          src={getCarrierLogo(flight.carrier)}
           alt="Логотип авиакомпании"
         />
         <p className="flight__carrier-title">{flight.carrier}</p>

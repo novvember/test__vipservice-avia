@@ -39,7 +39,7 @@ class MockApi {
         flights: [
           {
             id: 401,
-            carrier: 'S7 Airlines',
+            carrier: 'Aeroflot',
             refundable: true,
             cabbinLuggage: true,
             luggage: false,
@@ -123,7 +123,7 @@ class MockApi {
         flights: [
           {
             id: 406,
-            carrier: 'S7 Airlines',
+            carrier: 'UTair',
             refundable: false,
             cabbinLuggage: false,
             luggage: false,
@@ -159,7 +159,7 @@ class MockApi {
         flights: [
           {
             id: 501,
-            carrier: 'S7 Airlines',
+            carrier: 'Aeroflot',
             refundable: true,
             cabbinLuggage: true,
             luggage: true,
@@ -179,7 +179,7 @@ class MockApi {
           },
           {
             id: 502,
-            carrier: 'S7 Airlines',
+            carrier: 'Aeroflot',
             refundable: false,
             cabbinLuggage: true,
             luggage: false,
@@ -245,7 +245,7 @@ class MockApi {
         flights: [
           {
             id: 504,
-            carrier: 'S7 Airlines',
+            carrier: 'UTair',
             refundable: true,
             cabbinLuggage: true,
             luggage: true,
@@ -265,7 +265,7 @@ class MockApi {
           },
           {
             id: 505,
-            carrier: 'S7 Airlines',
+            carrier: 'UTair',
             refundable: true,
             cabbinLuggage: true,
             luggage: true,
