@@ -19,6 +19,7 @@ html {
   /* Цветовая схема */
   --surface: #fff;
   --on-surface: #232323;
+  --on-surface-variant: #5c5c5c;
   --primary: #5c87db;
   --primary-variant: #3e67b7;
   --on-primary: #fff;
@@ -27,6 +28,9 @@ html {
   --placeholder: #b7bac1;
   --inactive: #b7bac1;
   --border: #dde3ee;
+  --border-variant: #b7bac1;
+  --special: #8ba5d8;
+  --on-special: #fff;
   /* Цвета страницы по умолчанию */
   background-color: var(--surface);
   color: var(--on-surface);
