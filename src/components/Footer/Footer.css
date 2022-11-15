@@ -1,10 +1,5 @@
 .footer {
-  padding-top: 5em;
-  padding-bottom: 2em;
-  background-image: url(../../images/icon__plane_dark.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 1em;
-  background-size: 1.5em;
+  padding-block: 2em;
 }
 
 .footer__text {

@@ -8,6 +8,7 @@ import Form from '../Form/Form';
 import mockApi from '../../utils/mockApi';
 import { RoundTicket, SingleTicket } from '../../types/tickets';
 import Tickets from '../Tickets/Tickets';
+import Header from '../Header/Header';
 
 function App() {
   const navigate = useNavigate();
@@ -21,29 +22,31 @@ function App() {
 
   return (
     <div className="content">
-      <Routes>
-        <Route path="/" element={<Navigate to="/avia" />} />
-        <Route
-          path="/avia"
-          element={
-            <AviaPage>
-              <Form onSubmit={handleSearch} />
-            </AviaPage>
-          }
-        />
-        <Route
-          path="/avia/info"
-          element={
-            tickets.length > 0 ? (
-              <Tickets tickets={tickets} />
-            ) : (
-              <Navigate to="/avia" />
-            )
-          }
-        />
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
-
+      <Header />
+      <main className="main">
+        <Routes>
+          <Route path="/" element={<Navigate to="/avia" />} />
+          <Route
+            path="/avia"
+            element={
+              <AviaPage>
+                <Form onSubmit={handleSearch} />
+              </AviaPage>
+            }
+          />
+          <Route
+            path="/avia/info"
+            element={
+              tickets.length > 0 ? (
+                <Tickets tickets={tickets} />
+              ) : (
+                <Navigate to="/avia" />
+              )
+            }
+          />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   );

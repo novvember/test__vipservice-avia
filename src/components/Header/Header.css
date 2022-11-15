@@ -1,0 +1,28 @@
+.header {
+  padding-top: 3em;
+  padding-bottom: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo {
+  width: 1.5em;
+  aspect-ratio: 1;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.header__logo_fly {
+  animation: fly 4s;
+  transform-origin: 0 -10em;
+}
+
+@keyframes fly {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
