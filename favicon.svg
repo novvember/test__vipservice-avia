@@ -1,1 +1,15 @@
-<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#5C87DB"><path d="M3 18h18v2H3zm18.509-9.473a1.61 1.61 0 0 0-2.036-1.019L15 9 7 6 5 7l6 4-4 2-4-2-1 1 4 4 14.547-5.455a1.611 1.611 0 0 0 .962-2.018z"/></svg>
+<?xml version="1.0" ?><svg id="Слой_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"
+	xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<style type="text/css">
+		.st0 {
+			fill: #5c87db;
+			stroke: none;
+			stroke-width: 0;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-miterlimit: 10;
+		}
+	</style>
+	<path class="st0"
+		d="M441,217.8H326.7l-127-184l-61.5,3l70.4,181H103.1l-47.9-59.5l-37.8,0.8L67,252.3l-49.7,93.2l37.8,0.8  l47.9-59.5h105.6l-70.4,181l61.5,3l127-184h121.1c20.7,0,47.5-11.8,47.5-34.4C495.3,229.7,461.7,217.8,441,217.8z" />
+</svg>
